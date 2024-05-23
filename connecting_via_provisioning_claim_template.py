@@ -77,18 +77,9 @@ time.sleep(10)
 client.disconnect()
 
 
-def get_mac_address():
-    result = subprocess.run(["ifconfig"], stdout=subprocess.PIPE, text=True)
-    output = result.stdout
-    mac_address = re.search(r"([0-9a-f]{2}:){5}[0-9a-f]{2}", output, re.I).group(0)
-    return mac_address
-
-
-
-
 # Parameters for provisioning (if required by your template)
 parameters = {
-    "SerialNumber": get_mac_address(),  # Example parameter, adjust as needed
+    "SerialNumber": "1234",  # Example parameter, adjust as needed
     "AWS::IoT::Certificate::Id": certificate_id
 }
 
