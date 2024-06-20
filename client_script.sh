@@ -1,5 +1,5 @@
 #!/bin/bash
-Sudo apt update
+sudo apt update
 sudo apt install cmake
 sudo apt install openssl
 sudo apt install libssl-dev
